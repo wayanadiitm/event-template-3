@@ -5,6 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sehas-workshop.github.io',
+  site: 'https://wayanadiitm.github.io',
+  base: 'event-template-3',
   integrations: [mdx(), sitemap(), tailwind()]
 });
