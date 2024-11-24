@@ -1,0 +1,202 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import InfoCard from "@components/InfoCard.astro";
+import Image from "astro/components/Image.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Welcome to 👋</div>
+    <div class="text-5xl font-bold">SeHAS</div>
+    <div class="text-3xl py-3 font-bold">
+      The 7th International Workshop on Secure Hardware, Architectures, and
+      Software
+    </div>
+    <div class="text-xl py-1">January 21, 2025 - Barcelona, Spain</div>
+    <hr class="my-4" />
+    <div class="py-2 text-justify">
+      <text class="text-lg">
+        In today's digital landscape, the security and resilience of hardware
+        and software systems have become paramount concerns. To combat the
+        evolving threat landscape and the potential consequences of
+        cyberattacks, security research plays a vital role in identifying
+        vulnerabilities and developing robust defenses. Whether focusing on
+        hardware or software, dedicated research is a stepping stone for
+        safeguarding our digital ecosystem.
+      </text>
+    </div>
+    <div class="py-2 text-justify">
+      <text class="text-lg">
+        In the <b
+          >7th version of the International Workshop on Secure Hardware,
+          Architectures, and Software (SeHAS 2025)</b
+        >, we invite leading researchers in the field to delve into the latest
+        security threats, solutions, and emerging technologies. This workshop
+        aims to provide an international forum for researchers, practitioners,
+        and administrators from security and related disciplines to exchange
+        perspectives, share lessons learned, and gain new insights into securing
+        hardware, architectures, and software. Join us as we collectively
+        explore and contribute to the advancement of secure technologies.
+      </text>
+    </div>
+    <div class="py-2 text-justify">
+      <text class="text-lg">
+        SeHAS is organized as full-day workshop at the <a
+          href="https://www.hipeac.net/2025/barcelona/#/registration/"
+          target="_blank"
+          class="link link-accent"
+        >
+          HiPEAC conference</a
+        >.
+      </text>
+    </div>
+    <!-- <div class="mt-8">
+      <a href="/cfp.pdf" download="cfp.pdf" class="btn btn-outline ml-5">
+        Download CfP
+      </a>
+    </div> -->
+    <p></p>
+
+    <div class="divider my-0"></div>
+
+    <InfoCard
+      title="Submit your paper to SeHAS 2025 in Barcelona!"
+      img="/barcelona2025.jpg"
+      sub="Submission deadline: closed"
+      url="/cfp"
+      badge="SPAIN 🇪🇸"
+      target="_self"
+    />
+
+    <div class="divider my-0"></div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Previous editions</div>
+  </div>
+
+  <HorizontalCard
+    title="Munich 2024"
+    img="/munich2024.jpg"
+    desc="SeHAS@HiPEAC 17-19 January 2024, Munich, Germany"
+    url="https://www.hipeac.net/2024/munich/#/program/sessions/8081/"
+    badge="GERMANY"
+    loading="lazy"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Toulouse 2023"
+    img="/tolouse2023.jpg"
+    desc="SeHAS@HiPEAC 16-18 January 2023, Toulouse, France"
+    url="https://www.hipeac.net/2023/toulouse/#/program/sessions/8004/"
+    badge="FRANCE"
+    loading="lazy"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Budapest 2022"
+    img="/budapest2022.jpg"
+    desc="SeHAS@HiPEAC 20-22 June 2022, Budapest, Hungary"
+    url="https://www.hipeac.net/2022/budapest/#/program/sessions/7920/"
+    badge="HUNGARY"
+    loading="lazy"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Virtual Event 2021"
+    img="/virtual2021.jpg"
+    desc="SeHAS@HiPEAC 18-20 January 2021, Virtual Event"
+    url="https://www.hipeac.net/2021/budapest/#/program/sessions/7851/"
+    badge="VIRTUALLY"
+    loading="lazy"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Bologna 2020"
+    img="/bologna2020.jpg"
+    desc="SeHAS@HiPEAC 20-22 January 2020, Bologna, Italy"
+    url="https://www.hipeac.net/2020/bologna/#/program/sessions/7733/"
+    badge="ITALY"
+    loading="lazy"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Valencia 2019"
+    img="/valencia2019.jpg"
+    desc="SeHAS@HiPEAC 21-23 January 2020, Valencia, Spain"
+    url="https://www.hipeac.net/2019/valencia/#/program/sessions/7628/"
+    badge="SPAIN"
+    loading="lazy"
+  />
+
+  <!-- <div class="flex justify-between mt-10">
+    <div class="w-1/3 bg-white">
+       <img src="/ceda.png" alt="Image 1" class="w-full" /> -->
+  <!-- <Image
+            src="/ceda.png"
+            width={750}
+            height={422}
+            format="webp"
+            alt="CEDA Logo"
+            class="max-w-full md:max-w-[13rem] rounded-lg"
+          />
+    </div> -->
+  <!-- <div class="w-1/3 bg-white p-2">
+      <img src="/ieee-logo.gif" alt="Image 1" class="w-full" />
+    </div>
+    <div class="w-1/3 bg-white p-2">
+      <img src="/hipeac-logo.png" alt="Image 1" class="w-full" />
+    </div> -->
+  <!-- </div> -->
+  <div class="max-w-2xl mx-auto px-5 mt-28">
+    <div class="flex flex-col justify-center">
+      <div class="divider">Powered By</div>
+
+      <!-- <div class="text-center"> -->
+
+      <!-- <h2 class="font-semibold text-xl">Powered By</h2> -->
+
+      <!-- <p class="max-w-md mx-auto mt-2 text-gray-500">
+                We are thankful to each and every company sponsored our
+                plugin which helped us to continue working on it.
+            </p> -->
+
+      <!-- </div> -->
+
+      <div
+        class="flex flex-wrap items-center justify-center gap-10 mt-2 md:justify-around"
+      >
+        <div class="text-gray-400 bg-white p-4 rounded-lg shadow">
+          <Image
+            src="/ceda.png"
+            width={150}
+            height={150}
+            format="webp"
+            alt="CEDA Logo"
+            class="max-w-full md:max-w-[10rem] rounded-lg"
+          />
+        </div>
+
+        <div class="text-gray-400 bg-white p-4 rounded-lg shadow">
+          <Image
+            src="/hipeac-logo.png"
+            width={150}
+            height={150}
+            format="webp"
+            alt="HiPEAC Logo"
+            class="max-w-full md:max-w-[8rem] rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
