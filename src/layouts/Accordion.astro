@@ -15,87 +15,16 @@ const faqItems = [
 ];
 ---
 
-<div class="accordion-container">
+<div class="space-y-4">
   {faqItems.map((item, index) => (
-    <div class="accordion-item" key={index}>
-      <button
-        class="accordion"
-        aria-expanded="false"
-        aria-controls={`panel-${index}`}
-      >
+    <div key={index} class="collapse collapse-arrow border border-base-300 rounded-box">
+      <input type="checkbox" class="peer" />
+      <div class="collapse-title text-lg font-semibold peer-checked:bg-primary peer-checked:text-white">
         {item.question}
-      </button>
-      <div
-        id={`panel-${index}`}
-        class="panel"
-        role="region"
-        aria-labelledby={`accordion-${index}`}
-      >
+      </div>
+      <div class="collapse-content p-4 bg-base-200">
         <p>{item.answer}</p>
       </div>
     </div>
   ))}
 </div>
-
-<script type="module">
-  const accordions = document.querySelectorAll(".accordion");
-
-  accordions.forEach((accordion) => {
-    accordion.addEventListener("click", () => {
-      const panel = accordion.nextElementSibling;
-      const isExpanded = accordion.getAttribute("aria-expanded") === "true";
-      accordion.setAttribute("aria-expanded", !isExpanded);
-
-      if (isExpanded) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  });
-</script>
-
-<style>
-  .accordion-container {
-    margin: 20px;
-  }
-
-  .accordion {
-    background-color: #f1f1f1;
-    color: #444;
-    cursor: pointer;
-    padding: 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    outline: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .accordion:hover,
-  .accordion[aria-expanded="true"] {
-    background-color: #ddd;
-  }
-
-  .panel {
-    padding: 0 18px;
-    background-color: #f9f9f9;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .accordion {
-      font-size: 14px;
-      padding: 12px;
-    }
-
-    .panel {
-      padding: 0 15px;
-    }
-  }
-</style>
