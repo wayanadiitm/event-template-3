@@ -8,40 +8,9 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Rules & FAQs</div>
   </div>
 
-  <!-- Accordion Section for FAQ -->
-  <div class="accordion" id="faqAccordion">
-
-    <!-- FAQ #1 -->
-    <button class="accordion">#1 I'm from Wayanad, but I'd like to team up with my friend who's from Gir.</button>
-    <div class="panel">
-      <p><i class="lni lni-reply"></i> Of course, it's perfectly fine for a team to include members from different houses.</p>
-    </div>
-
-    <hr>
-
-    <!-- FAQ #2 -->
-    <button class="accordion">#2 I've already registered a few days ago as an individual participant. Now I wish to team up with another student who has the same issue as mine. What should I do?</button>
-    <div class="panel">
-      <p><i class="lni lni-reply"></i> <strong>Please re-submit the <a href="https://forms.gle/eD1WxU9sEWaEk2WL8" target="_blank">registration form</a> with the updated team member details.</strong> Either of you can submit. Our automated scripts will detect such cases and both of your previous responses will be discarded after processing. You will be issued one team ID.</p>
-    </div>
-
-    <hr>
-
-    <!-- FAQ #3 -->
-    <button class="accordion">#3 Will the organizers create the teams?</button>
-    <div class="panel">
-      <p><i class="lni lni-reply"></i> With around 700 IITM BS students present in our LogicLooM and ML Challenge groups (combined), we encourage you to form teams through discussions and by sharing your skills with each other. Collaboration is an important aspect of these events, so we highly recommend working together if possible.</p>
-      <p>However, if you're unable to find a team-mate, register 'solo'. <strong>Once registration closes and the data is processed, we will pair solo registrants into teams according to the following priority rules:</strong></p>
-      <ul>
-        <li><strong>Batch Similarity:</strong> We will prioritize pairing students from the same or adjacent batches.</li>
-        <li><strong>Track Preference:</strong> We will ensure that team members are assigned to the same track they selected during registration.</li>
-      </ul>
-      <p>By following these rules, we aim to create balanced and compatible teams to enhance your event experience.</p>
-      <p><strong>All participants will receive a confirmation auto-mail from 'no-reply wayanad' regarding the team allocation details and team ID.</strong></p>
-    </div>
-
-    <hr>
-
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <Accordion />
   </div>
 
   <!-- Deadlines and TimeLine Sections (Same as before) -->

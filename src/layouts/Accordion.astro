@@ -1,0 +1,101 @@
+---
+const faqItems = [
+  {
+    question: "What is Astro?",
+    answer: "Astro is a modern static site generator designed to make the web fast. It compiles your site to static HTML, while still allowing you to use modern JavaScript frameworks when needed."
+  },
+  {
+    question: "Is Astro a JavaScript framework?",
+    answer: "No, Astro is not a JavaScript framework. It allows you to build static sites using multiple frameworks like React, Vue, Svelte, etc."
+  },
+  {
+    question: "How do I install Astro?",
+    answer: "You can install Astro by running `npm init astro` from the command line, then follow the prompts to set up your project."
+  }
+];
+---
+
+<div class="accordion-container">
+  {faqItems.map((item, index) => (
+    <div class="accordion-item" key={index}>
+      <button
+        class="accordion"
+        aria-expanded="false"
+        aria-controls={`panel-${index}`}
+      >
+        {item.question}
+      </button>
+      <div
+        id={`panel-${index}`}
+        class="panel"
+        role="region"
+        aria-labelledby={`accordion-${index}`}
+      >
+        <p>{item.answer}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+<script type="module">
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", () => {
+      const panel = accordion.nextElementSibling;
+      const isExpanded = accordion.getAttribute("aria-expanded") === "true";
+      accordion.setAttribute("aria-expanded", !isExpanded);
+
+      if (isExpanded) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+<style>
+  .accordion-container {
+    margin: 20px;
+  }
+
+  .accordion {
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion:hover,
+  .accordion[aria-expanded="true"] {
+    background-color: #ddd;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .accordion {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    .panel {
+      padding: 0 15px;
+    }
+  }
+</style>
