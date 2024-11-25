@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Call for Papers" sideBarActiveItemID="cfp">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Call for Papers</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    SeHAS implements the <b>journal-first publication model</b>. All submitted
+    papers will be reviewed by the high-quality ecosystem provided by <a
+      href="https://ieee-ceda.org/publication/esl"
+      target="_blank"
+      class="link link-accent">IEEE Embedded Systems Letters (ESL)</a
+    >. If your submission is accepted, it will be published in <b>IEEE ESL</b>.
+    Authors of accepted papers will have the opportunity to present their work
+    through a presentation at SeHAS. One registration per presenter at the
+    HiPEAC conference is mandatory. We look forward to receiving your
+    submissions and engaging in fruitful discussions at SeHAS.
+    <div class="mt-8">
+      <a href="/cfp.pdf" download="cfp.pdf" class="btn btn-outline ml-5">
+        Download CfP
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Topics of Interest</div>
+  </div>
+
+  <div class="time-line-container grid gap-3 mb-10 grid-cols-">
+    <TimeLineElement
+      title="SeHAS 2025 invites original research papers on all aspects of security in hardware, architectures, and software. Topics of interest include, but are not limited to:"
+    >
+      <ul class="list-disc md:columns-2 columns-2 mx-6">
+        <li>Hardware security</li>
+        <li>Software security</li>
+        <li>EDA for security</li>
+        <li>Architecture-level security</li>
+        <li>System security</li>
+        <li>Automation in security</li>
+        <li>Embedded security</li>
+        <li>Emerging technologies and security</li>
+        <li>Machine learning for security</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Topics of interest</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    SeHAS 2025 invites original research papers on all aspects of security in
+    hardware, architectures, and software. Topics of interest include, but are
+    not limited to:
+    <ul class="list-disc mb-10 md:columns-2 columns-2 mx-6">
+      <li>Hardware security</li>
+      <li>Software security</li>
+      <li>EDA for security</li>
+      <li>Architecture-level security</li>
+      <li>System security</li>
+      <li>Automation in security</li>
+      <li>Embedded security</li>
+      <li>Emerging technologies and security</li>
+      <li>Machine learning for security</li>
+    </ul>
+  </div> -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Deadlines</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement title="Submission: closed" />
+    <TimeLineElement
+      title="Notification: approx. 4 weeks after the submission deadline"
+    >
+      As the submitted papers are reviewed within the standard IEEE ESL review
+      system, we cannot offer a fixed notification date. However, ESL aims to
+      notify authors of the review outcome within 4 weeks of the submission
+      deadline.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Submission Guidelines</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement title="Length">
+      Up to 4 pages in an IEEE double-column, single-blind, 10-pt format.
+      More information on the format can be found <a
+      class="link link-accent"
+      href="https://ieee-ceda.org/publication/esl/esl-paper-submission"
+      >here</a
+    >.
+    </TimeLineElement>
+    <TimeLineElement title="Review process">
+      The review is processed by IEEE Embedded Systems Letters (ESL).
+    </TimeLineElement>
+    <TimeLineElement title="Publication">
+      All accepted papers will be published in <a
+        class="link link-accent"
+        href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4563995"
+        >IEEE ESL</a
+      >.
+    </TimeLineElement>
+    <TimeLineElement title="Presentation">
+      Authors of accepted papers will have the opportunity to present their work
+      at SeHAS@HIPEAC 2025 in Barcelona, Spain.
+      To present a paper at SeHAS, the presenting author must register for the
+      HiPEAC conference (see registration details).
+    </TimeLineElement>
+    <TimeLineElement title="Submission link">
+      To submit your paper, please use the following link: <a
+        class="link link-accent"
+        href="https://mc.manuscriptcentral.com/les-ieee"
+        >https://mc.manuscriptcentral.com/les-ieee</a
+      >. <p></p><b
+        ><span
+          class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+          >Important</span
+        > To be considered for SeHAS 2025, select the check-box in step 6 in the
+        ESL submission portal indicating that you would like your paper to be considered
+        for presentation at a conference/workshop that has a tie-up with ESL.
+      </b>
+    </TimeLineElement>
+  </div>
+</BaseLayout>
