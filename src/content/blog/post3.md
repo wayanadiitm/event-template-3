@@ -1,6 +1,6 @@
 ---
 title: "Random Forest Explained: A Visual Guide with Code Examples"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+description: "https://towardsdatascience.com/random-forest-explained-a-visual-guide-with-code-examples-9f736a6e1b3c"
 pubDate: "Nov 07 2024"
 heroImage: "https://apmonitor.com/pds/uploads/Main/classification_6.png"
 badge: "External"
