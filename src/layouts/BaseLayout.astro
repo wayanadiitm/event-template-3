@@ -38,5 +38,19 @@ const {
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
+<script>
+const backToTopButton = document.getElementById('back-to-top-btn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.add('active');
+        } else {
+          backToTopButton.classList.remove('active');
+        }
+      });
+
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
