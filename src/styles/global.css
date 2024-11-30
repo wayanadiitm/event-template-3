@@ -60,6 +60,7 @@ html, body, html *, body * {
 	 opacity: 0;
 	 transform: translate(-50%, -50%);
 	 transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	 z-index: 9999;
 }
  .cursor-dot {
 	 width: 9px;
@@ -70,4 +71,7 @@ html, body, html *, body * {
 	 width: 25px;
 	 height: 25px;
 	 background-color: rgba(125, 186, 200, 0.5);
+}
+a {
+    cursor: default; /* Remove hand cursor from links */
 }
