@@ -50,6 +50,7 @@
 
 html, body, html *, body * {
 	 cursor: none;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
 }
  .cursor-dot, .cursor-dot-outline {
 	 pointer-events: none;
