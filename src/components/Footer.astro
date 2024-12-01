@@ -170,3 +170,38 @@ var cursor = {
 }
 cursor.init();
 </script>
+<script>
+  const phrases = [
+    "LogicLooM 🚀",
+    "IITM Paradox ✨",
+    "லாஜிக்ளோம் 💡"
+  ];
+      
+  let index = 0;
+  let charIndex = 0;
+  const typingSpeed = 100;
+  const pauseDuration = 2000;
+  const titleElement = document.getElementById('typing-title');
+  function type() {
+    if (charIndex < phrases[index].length) {
+      titleElement.textContent += phrases[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(deleteText, pauseDuration);
+    }
+  }
+  function deleteText() {
+    if (charIndex > 0) {
+      titleElement.textContent = phrases[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(deleteText, typingSpeed);
+    } else {
+      index = (index + 1) % phrases.length;
+      titleElement.textContent = '';
+      charIndex = 0; // Reset char index
+      setTimeout(type, typingSpeed + 500);
+    }
+  }
+  type();
+</script>
