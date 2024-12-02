@@ -1,10 +1,12 @@
 ---
-title: "Random Forest Explained: A Visual Guide with Code Examples"
-description: "https://towardsdatascience.com/random-forest-explained-a-visual-guide-with-code-examples-9f736a6e1b3c"
+title: "From 18 to 64! LogicLooM inspired all"
+description: "The Learning Curve!"
 pubDate: "Nov 07 2024"
-heroImage: "https://apmonitor.com/pds/uploads/Main/classification_6.png"
-badge: "External"
-tags: ["ML","classification"]
+heroImage: "https://wayanadiitm.github.io/ml/assets/images/logicloom/DSC_8240.JPG"
+badge: "Feedback"
+tags: ["2.0","interview"]
 ---
 
-Visit the link https://towardsdatascience.com/random-forest-explained-a-visual-guide-with-code-examples-9f736a6e1b3c
+Ms. Sasikala B...completed her edu in...served as a manager at the SBI... participated...experience
+
+<iframe width="477" height="200" src="https://www.youtube.com/embed/lXLNq44l6co" title="Discussion with Ms. Sasikala B, a LogicLooM participant (venue: ICSR, IITM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
