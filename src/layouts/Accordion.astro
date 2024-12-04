@@ -2,63 +2,59 @@
 const faqItems = [
   {
     question: "What's the eligibility to participate?",
-    answer: "This is a PAN BS event. All students (irrespective of the level) enrolled (i.e. having the student mail id) in the IITM UG Data Science or Electronic Systems programme are welcome to register for our event."
+    answer: "This is a PAN BS event. All students enrolled in the IITM Data Science or Electronic Systems programme are welcome to register for our event."
   },
   {
-    question: "I'm a Foundational student. Should I participate?",
-    answer: "<b>Absolutely! We strongly encourage you to register.</b> You need not worry if you're just starting out and don't have a technical or coding background. We're providing you with easy-to-understand resources and a detailed roadmap to help you get familiar with Python first. Our goal isn't for you to master these intricate aspects right away, but rather to gain a solid understanding of the basics and how ML works. This will be a fantastic hands-on opportunity & learning experience. Give it a try. Join our ML 101 sessions, learn and enjoy the challenge :)"
-  },
-  {
-    question: "I've already registered as an individual participant. Now I wish to team up with another student.",
-    answer: "Please update the registration form on the Paradox portal."
-  },
-  {
-    question: "Will the organizers create the teams?",
-    answer: "We encourage you to form teams. Collaboration is an important aspect of these events, so we highly recommend working together if possible. If you're unable to find a team-mate, register 'solo' and choose 'Place Me in a Team' in the Paradox registration form.<br>Once registration closes and the data is processed, we will pair the willing solo registrants into teams according to the following priority rules: Batch Similarity: We will prioritize pairing students from the same or adjacent batches. Track Preference: We will ensure that team members are assigned to the same track they selected during registration."
-  },
-  {
-    question: "I want to participate individually, is that allowed?",
-    answer: "We understand that some participants may prefer to compete individually. If you possess the necessary skills (proficiency in Python and ML/NLP/CV), go ahead!"
-  },
-  {
-    question: "I've already registered my '2 member' team, but now wish to add the 3rd participant. Am I allowed to make changes?",
-    answer: "Yes, please update the registration form with the updated team member details. The final response before the deadline will be considered."
-  },
-  {
-    question: "Our team opted for the ABC task. Can we modify our track as well?",
-    answer: "Yes, submit the registration form with the updated track choice. Any changes are possible until the deadline."
-  },
-  {
-    question: "Can a team participate in both the tasks?",
-    answer: "NO, a team can only opt for <b>one track</b>."
-  },
-  {
-    question: "Are pre-trained, fine-tuned models allowed?",
-    answer: "Yes."
+    question: "I'm a Foundational student. Should I participate in the ML contest?",
+    answer: "Absolutely! We strongly encourage you to join us. No need to worry if you're just starting out and don't have a coding background. We've got you covered with ML-101 (tutorial/mentor) sessions and beginner-friendly resources to help you get started. The goal isn't to master ML or become an expert overnight but to gain a solid understanding of the basics and explore how ML works. This will be a fantastic hands-on opportunity and learning experience. So, take the plunge. You'll be the happiest when you build your first model :)"
   },
 {
-    question: "What is the evaluation metric for the Prelims?",
-    answer: "We will be using ROUGE-L and BLEU for first task and AUC-ROC for the second. Event specific details will be shared with the registered participants."
+    question: "Can I attend the workshops online?",
+    answer: "Yes. Margazhi 2025 will be conducted virtually."
   },
   {
-    question: "Is there some restriction in the libraries or models we can use?",
-    answer: "Yes, there are specific restrictions for each track. You'll get complete clarity once we release the detailed problem statements with the task-specific rules."
+    question: "How many participants can be there in a team?",
+    answer: "Maximum 3."
   },
 {
-    question: "Is there some interface where we can check our model scores during the development phase?",
-    answer: "Yes! Our participant portal allows you to test-run your model performance on the main test dataset any number of times before you submit your final prediction - this will help you optimize your model performance & submit the best run."
+    question: "How useful is it to participate as a team?",
+    answer: "Collaboration is an important aspect of ML contents and working as a team offers numerous benefits - not only does it save time but also help you develop essential peer-connect and teamwork skills. Plus, events like these are about learning and sharing, not competing individually like in a graded exam. The true essence lies in collaborating, exchanging ideas and growing together. So we highly recommend working together... it'll make the experience more enriching and enjoyable!"
+  },
+  {
+    question: "I can't see an option to add multiple emails in the registration form. How can I create a team?",
+    answer: "That's no problem at all! If you already have a teammate in mind, simply ask them to register individually. Team formation will take place through our dedicated event portal where participants can invite others to join their team and the invitees can accept to become a part of it. It's simple and streamlined - just register and the rest will follow!"
+  },
+  {
+    question: "Can I participate individually?",
+    answer: "Yes. While teamwork is encouraged, we understand that some participants may prefer to compete individually. If you have the necessary skills like proficiency in Python, machine learning and NLP, feel free to go solo."
+  },
+  {
+    question: "Can a participant be in more than one team?",
+    answer: "NO! That's strictly not allowed."
+  },
+{
+    question: "What is the evaluation metric for the ML Contest?",
+    answer: "We will be using ROUGE-L and BLEU metrics. Event specific details will be shared with the registered participants in due time."
+  },
+  {
+    question: "Are there any restrictions in the libraries or models we can use? Are pre-trained, fine-tuned models allowed?",
+    answer: "Yes, there are specific restrictions. We will release the detailed problem statements with the task-specific rules shortly."
+  },
+{
+    question: "Will a development set be provided?",
+    answer: "Yes!"
   },
   {
     question: "Will there be any sessions to clarify doubts regarding the challenge?",
-    answer: "Yes, there will be ML 101 sessions that will be conducted after the end-sem exams itself. Additionally, assistance sessions will be hosted, which should help the teams during the training and development phase."
+    answer: "Yes, mentoring sessions will start after the end-sem itself. Additionally, assistance sessions will be conducted to help the teams (especially the freshers) during the model training and development phase."
   },
 {
-    question: "I can't login to the LogicLooM Participant app portal.",
-    answer: "To access the participants portal and attempt the prelims, a seamless login system is now enabled through Google OAuth integration.<br>Simply sign in using the <b>IITM student G-account</b> used while registering for our event on the Paradox portal. If you attempt to log in with a different account, you'll receive an error message and won't be eligible to access it.<br>Please write to logicloom@ds.study.iitm.ac.in for any queries."
+    question: "I can't login to the LogicLooM Participant portal.",
+    answer: "To access the participants portal, a seamless login system is enabled through Google OAuth integration. Simply sign in using the IITM student G-account used while registering for our event on the Paradox portal. If you attempt to log in with a different account, you'll receive an error message and won't be able to access it. Please write to logicloom@ds.study.iitm.ac.in for any queries."
   },
 {
     question: "I have some other questions that haven't been discussed here.",
-    answer: "We suggest you to read the event Rule book first, everything has been explained there in detail.<br>Still, if you have any general questions or face technical issues, feel free to contact the organizers at logicloom@ds.study.iitm.ac.in. We will try to reply back within one working day."
+    answer: "We suggest you to read the event rulebook first, everything has been explained in detail. Still, if you have any general questions or face technical issues, feel free to contact the organizers at logicloom@ds.study.iitm.ac.in. We will try to reply back within one working day."
   }
 ];
 
