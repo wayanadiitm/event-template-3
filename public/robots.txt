@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wayanadiitm.github.io/event-template-3/sitemap-index.xml
+Sitemap: https://logicloom.iitmparadox.org/sitemap-index.xml
