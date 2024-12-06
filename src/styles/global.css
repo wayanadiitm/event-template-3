@@ -4,7 +4,7 @@
 
 ::selection {
   background-color: cyan;
-  color: white;
+  color: black;
 }
 
 ::-webkit-scrollbar {
