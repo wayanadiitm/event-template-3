@@ -171,6 +171,31 @@ var cursor = {
 cursor.init();
 </script>
 <script>
+  const images = [
+    {
+      src: "/textlogo_new.png",
+      width: 1920,
+      height: 1080
+    },
+    {
+      src: "/textlogo_dark.PNG",
+      width: 858,
+      height: 507
+    }
+  ];
+  const imageElement = document.getElementById("imageSwitcher");
+  let currentIndex = 0;
+  function switchImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    const newImage = images[currentIndex];
+    imageElement.src = newImage.src;
+    imageElement.width = newImage.width;
+    imageElement.height = newImage.height;
+  }
+
+  setInterval(switchImage, 10000);
+</script>
+<script>
   const phrases = [
     "LogicLooM 🚀",
     "IITM Paradox"
@@ -203,20 +228,4 @@ cursor.init();
     }
   }
   type();
-</script>
-<script>
-  const images = [
-    "/textlogo_new.png",
-    "/textlogo_dark.PNG"
-  ];
-
-  const imageElement = document.getElementById("imageSwitcher");
-
-  let currentIndex = 0;
-  function switchImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    imageElement.src = images[currentIndex]; // Change the image source
-  }
-
-  setInterval(switchImage, 10000);
 </script>
