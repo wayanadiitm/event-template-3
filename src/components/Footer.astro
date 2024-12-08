@@ -204,3 +204,19 @@ cursor.init();
   }
   type();
 </script>
+<script>
+  const images = [
+    "/textlogo_new.png",
+    "/textlogo_dark.PNG"
+  ];
+
+  const imageElement = document.getElementById("imageSwitcher");
+
+  let currentIndex = 0;
+  function switchImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    imageElement.src = images[currentIndex]; // Change the image source
+  }
+
+  setInterval(switchImage, 10000);
+</script>
