@@ -1,8 +1,8 @@
 ---
-title: "From 18 to 64! LogicLooM inspired all"
-description: "The Learning Curve!"
+title: "Coming Soon ..."
+description: ""
 pubDate: "Nov 07 2024"
-heroImage: "https://wayanadiitm.github.io/ml/assets/images/logicloom/DSC_8240.JPG"
+heroImage: ""
 badge: "Feedback"
 tags: ["2.0","interview"]
 ---
