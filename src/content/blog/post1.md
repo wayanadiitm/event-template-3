@@ -1,5 +1,5 @@
 ---
-title: "Headline 1"
+title: "LogicLooM: Success Stories You Can't Miss!"
 description: "description 1"
 pubDate: "Dec 22 2024"
 heroImage: "/blog1.png"
