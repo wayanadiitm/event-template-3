@@ -1,5 +1,5 @@
 ---
-title: "Headline 1"
+title: "LogicLooM: Turning Strangers into Lifelong Teammates"
 description: "description 1"
 pubDate: "Dec 22 2024"
 heroImage: "/blog2.png"
