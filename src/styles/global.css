@@ -84,60 +84,32 @@ a {
 
 
 .feedback-carousel {
-  display: flex;
-  flex-direction: row; /* Align items in a row */
-  animation: slideFeedback 12s infinite linear; /* Infinite sliding animation */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .feedback-item {
-  opacity: 0;
-  animation: fadeInOut 12s ease-in-out infinite;
-  flex: 0 0 100%;
-  transition: opacity 1s;
-  min-width: 100%; /* Ensures each item takes up full width */
-}
-
-.feedback-item:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.feedback-item:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.feedback-item:nth-child(3) {
-  animation-delay: 6s;
-}
-
-.feedback-item:nth-child(4) {
-  animation-delay: 9s;
-}
-
-/* Fade In / Out Animation */
-@keyframes fadeInOut {
-  0%, 100% {
+    min-width: 100%;
+    flex-shrink: 0; /* Prevent shrinking */
     opacity: 0;
-  }
-  20%, 80% {
-    opacity: 1;
-  }
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Horizontal sliding effect */
-@keyframes slideFeedback {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(-200%);
-  }
-  75% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.feedback-item.active {
+    opacity: 1; /* Show active feedback */
+}
+
+.prev-btn, .next-btn {
+    z-index: 10;
+    top: 50%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
