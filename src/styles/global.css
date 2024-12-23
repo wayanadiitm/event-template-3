@@ -144,3 +144,68 @@ a {
     color: #f59e0b;
     font-size: 1.5rem;
 }
+
+
+
+/* Global styles for the footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Footer columns */
+.footer-column {
+  color: white;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for copyright */
+.footer-column.copyright {
+  font-size: 14px;
+}
+
+/* Styling for links */
+.footer-column.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column.links li {
+  margin-bottom: 8px;
+}
+
+/* Styling for contact */
+.footer-column.contact p {
+  margin: 0;
+}
+
+/* Responsive design (optional, for smaller screens) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
