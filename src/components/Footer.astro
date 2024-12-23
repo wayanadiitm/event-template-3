@@ -206,35 +206,47 @@ cursor.init();
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    const feedbackItemsContainer = document.querySelector('.feedback-items');
+    // Array of feedback objects (comment and author)
+    const feedbacks = [
+        {
+            text: `"Attempted many technical events in various editions of Paradox. LogicLooM tops them all. Good support, amazing coordination and overall an excellent event. Kudos to the organizers. Will be looking forward to future events."`,
+            author: "- GK"
+        },
+        {
+            text: `"Warmup questions were like jalebi:) They wrapped around twisting it multiple times. Round2 was hard! We scratched our head for 2.5 hours and did what we could. In this process, we definitely learnt a lot. Thanks to LogicLooM team for organizing such a great event. Had too much fun and learning."`,
+            author: "- Siddharth"
+        },
+        {
+            text: `"The event was so great and well structured that a newbie in ML like me was also able to make a ML model and even get a decent score, building my confidence in the first try. Also, the organizers have also managed the event very well."`,
+            author: "- Krish, Md. Shah"
+        }
+    ];
+
     let currentIndex = 0;
 
-    // Function to show feedback at current index
-    function showFeedback(index) {
-        // Hide all feedback items
-        feedbackItems.forEach(item => item.classList.remove('active'));
+    // Get the elements for feedback text and author
+    const feedbackTextElement = document.getElementById("feedback-text");
+    const feedbackAuthorElement = document.getElementById("feedback-author");
 
-        // Add 'active' class to the current feedback item
-        feedbackItems[index].classList.add('active');
-
-        // Slide the feedback container to show the correct item
-        feedbackItemsContainer.style.transform = `translateX(-${index * 100}%)`;
+    // Function to update the feedback content
+    function updateFeedback(index) {
+        feedbackTextElement.textContent = feedbacks[index].text;
+        feedbackAuthorElement.textContent = feedbacks[index].author;
     }
 
-    // Show the first feedback initially
-    showFeedback(currentIndex);
+    // Initial feedback display
+    updateFeedback(currentIndex);
 
     // Prev Button functionality
     document.querySelector('.prev-btn').addEventListener('click', function () {
-        currentIndex = (currentIndex === 0) ? feedbackItems.length - 1 : currentIndex - 1;
-        showFeedback(currentIndex);
+        currentIndex = (currentIndex === 0) ? feedbacks.length - 1 : currentIndex - 1;
+        updateFeedback(currentIndex);
     });
 
     // Next Button functionality
     document.querySelector('.next-btn').addEventListener('click', function () {
-        currentIndex = (currentIndex === feedbackItems.length - 1) ? 0 : currentIndex + 1;
-        showFeedback(currentIndex);
+        currentIndex = (currentIndex === feedbacks.length - 1) ? 0 : currentIndex + 1;
+        updateFeedback(currentIndex);
     });
 });
 </script>
