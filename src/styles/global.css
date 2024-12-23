@@ -100,9 +100,10 @@ a {
     height: auto;
     word-wrap: break-word;
     box-sizing: border-box;
+    transition: transform 0.5s ease; /* Smooth transition for animations */
 }
 
-/* Navigation buttons for prev/next */
+/* Navigation buttons with better design */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -115,6 +116,7 @@ a {
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .prev-btn {
@@ -123,4 +125,22 @@ a {
 
 .next-btn {
     right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    transform: translateY(-50%) scale(1.2); /* Button scale effect on hover */
+}
+
+/* Styling for the feedback text */
+.feedback-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.feedback-text i {
+    margin-right: 10px;
+    color: #f59e0b;
+    font-size: 1.5rem;
 }
