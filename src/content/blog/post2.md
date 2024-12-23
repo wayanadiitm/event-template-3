@@ -1,6 +1,6 @@
 ---
-title: "LogicLooM: Turning Strangers into Lifelong Teammates"
-description: "description 1"
+title: "LogicLooM: A Journey of Challenges, Growth, and Innovation"
+description: "From inspiring out-of-the-box thinking to fostering personal growth, LogicLooM captivated participants with its mind-bending rounds. Join us next year for more learning, fun, and unforgettable experiences!"
 pubDate: "Dec 22 2024"
 heroImage: "/blog2.png"
 badge: "Feedback"
