@@ -207,28 +207,31 @@ cursor.init();
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const feedbackItems = document.querySelectorAll('.feedback-item');
+    const feedbackItemsContainer = document.querySelector('.feedback-items');
     let currentIndex = 0;
 
-    // Function to show the current feedback
+    // Function to show feedback at current index
     function showFeedback(index) {
         // Hide all feedback items
         feedbackItems.forEach(item => item.classList.remove('active'));
-        // Show the current feedback item
+
+        // Add 'active' class to the current feedback item
         feedbackItems[index].classList.add('active');
-        // Slide the carousel to the current feedback
-        document.querySelector('.feedback-carousel').style.transform = `translateX(-${index * 100}%)`;
+
+        // Slide the feedback container to show the correct item
+        feedbackItemsContainer.style.transform = `translateX(-${index * 100}%)`;
     }
 
     // Show the first feedback initially
     showFeedback(currentIndex);
 
-    // Prev Button Event Listener
+    // Prev Button functionality
     document.querySelector('.prev-btn').addEventListener('click', function () {
         currentIndex = (currentIndex === 0) ? feedbackItems.length - 1 : currentIndex - 1;
         showFeedback(currentIndex);
     });
 
-    // Next Button Event Listener
+    // Next Button functionality
     document.querySelector('.next-btn').addEventListener('click', function () {
         currentIndex = (currentIndex === feedbackItems.length - 1) ? 0 : currentIndex + 1;
         showFeedback(currentIndex);
