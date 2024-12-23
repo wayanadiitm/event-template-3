@@ -81,3 +81,57 @@ html, body, html *, body * {
 a {
     cursor: default; /* Remove hand cursor from links */
 }
+
+
+.feedback-carousel {
+  display: flex;
+  flex-direction: column;
+  animation: slideFeedback 12s infinite;
+}
+
+.feedback-item {
+  opacity: 0;
+  animation: fadeInOut 12s ease-in-out infinite;
+  flex: 0 0 100%;
+  transition: opacity 1s;
+}
+
+.feedback-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.feedback-item:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.feedback-item:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.feedback-item:nth-child(4) {
+  animation-delay: 9s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFeedback {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+}
