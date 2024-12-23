@@ -228,10 +228,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const feedbackTextElement = document.getElementById("feedback-text");
     const feedbackAuthorElement = document.getElementById("feedback-author");
 
-    // Function to update the feedback content
+    // Function to update the feedback content with animation
     function updateFeedback(index) {
-        feedbackTextElement.textContent = feedbacks[index].text;
-        feedbackAuthorElement.textContent = feedbacks[index].author;
+        feedbackTextElement.classList.add("fade-out"); // Add fade-out effect
+
+        // Wait for fade-out to complete before updating content
+        setTimeout(() => {
+            feedbackTextElement.innerHTML = `<i class="fa fa-quote-left" aria-hidden="true"></i> ${feedbacks[index].text}`;
+            feedbackAuthorElement.textContent = feedbacks[index].author;
+            feedbackTextElement.classList.remove("fade-out");
+            feedbackTextElement.classList.add("fade-in"); // Add fade-in effect
+
+            setTimeout(() => {
+                feedbackTextElement.classList.remove("fade-in"); // Remove fade-in effect after transition
+            }, 500);
+        }, 500); // Delay to ensure smooth transition
     }
 
     // Initial feedback display
@@ -248,5 +259,11 @@ document.addEventListener("DOMContentLoaded", function () {
         currentIndex = (currentIndex === feedbacks.length - 1) ? 0 : currentIndex + 1;
         updateFeedback(currentIndex);
     });
+
+    // Auto change feedback every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex === feedbacks.length - 1) ? 0 : currentIndex + 1;
+        updateFeedback(currentIndex);
+    }, 5000);
 });
 </script>
