@@ -82,8 +82,8 @@ a {
     cursor: default; /* Remove hand cursor from links */
 }
 
-
-.feedback-carousel {
+/* Ensure feedback items are in one row */
+.feedback-items {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -91,19 +91,30 @@ a {
 .feedback-item {
     min-width: 100%;
     flex-shrink: 0; /* Prevent shrinking */
+    padding: 2rem; /* Adjust padding for better spacing */
+    height: 250px; /* Ensure enough height to show the entire comment */
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Show active feedback */
 .feedback-item.active {
-    opacity: 1; /* Show active feedback */
+    opacity: 1;
 }
 
+/* Navigation Buttons */
 .prev-btn, .next-btn {
-    z-index: 10;
+    position: absolute;
     top: 50%;
-    font-size: 1.5rem;
     transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: yellow;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .prev-btn {
