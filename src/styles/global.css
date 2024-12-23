@@ -85,8 +85,8 @@ a {
 
 .feedback-carousel {
   display: flex;
-  flex-direction: column;
-  animation: slideFeedback 12s infinite;
+  flex-direction: row; /* Align items in a row */
+  animation: slideFeedback 12s infinite linear; /* Infinite sliding animation */
 }
 
 .feedback-item {
@@ -94,6 +94,7 @@ a {
   animation: fadeInOut 12s ease-in-out infinite;
   flex: 0 0 100%;
   transition: opacity 1s;
+  min-width: 100%; /* Ensures each item takes up full width */
 }
 
 .feedback-item:nth-child(1) {
@@ -112,6 +113,7 @@ a {
   animation-delay: 9s;
 }
 
+/* Fade In / Out Animation */
 @keyframes fadeInOut {
   0%, 100% {
     opacity: 0;
@@ -121,17 +123,21 @@ a {
   }
 }
 
+/* Horizontal sliding effect */
 @keyframes slideFeedback {
-  0%, 100% {
-    transform: translateY(0);
+  0% {
+    transform: translateX(0);
   }
   25% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   50% {
-    transform: translateY(-200%);
+    transform: translateX(-200%);
   }
   75% {
-    transform: translateY(-300%);
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
