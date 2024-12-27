@@ -3,8 +3,8 @@ title: "LogicLooM: Where Challenges Meet Collaboration"
 description: "From coding warm-ups to real-world AI challenges, LogicLooM fostered teamwork and lasting friendships. The intense finale and shared experiences made it a journey beyond competition."
 pubDate: "Dec 22 2024"
 heroImage: "/blog4.png"
-badge: "Feedback"
-tags: ["2.0","interview"]
+badge: ""
+tags: ["2.0","1.0"]
 ---
 
 We kicked off the event with a thought-provoking warm-up round that blended coding logic with aptitude challenges. It was the perfect icebreaker to get our participants thinking critically and preparing them for the journey ahead. But that was just the beginning! 
