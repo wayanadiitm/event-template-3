@@ -1,10 +1,10 @@
 ---
 title: "LogicLooM Milestones: A Seamless and Impactful Journey"
-description: "With over 600 registrations, a flawless participant portal and inspiring workshops by eminent professors, LogicLooM set new standards for excellence and transparency. The countdown to the next edition has begun !"
+description: "With over 600 registrations, a flawless participant portal and inspiring workshops by eminent professors, LogicLooM set new standards for excellence and transparency. The countdown to the next edition has begun!"
 pubDate: "Dec 22 2024"
 heroImage: "/blog3.png"
-badge: "Feedback"
-tags: ["2.0","interview"]
+badge: "Achievements"
+tags: ["2.0"]
 ---
 
 With an overwhelming response from our community, we hit a major milestone: over 600 registrations! We managed to stay true to our event’s objectives, delivering an experience that was both impactful and seamless.
