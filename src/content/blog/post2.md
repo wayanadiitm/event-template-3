@@ -3,8 +3,8 @@ title: "LogicLooM: A Journey of Challenges, Growth, and Innovation"
 description: "From inspiring out-of-the-box thinking to fostering personal growth, LogicLooM captivated participants with its mind-bending rounds. Join us next year for more learning, fun, and unforgettable experiences!"
 pubDate: "Dec 22 2024"
 heroImage: "/blog2.png"
-badge: "Feedback"
-tags: ["2.0","interview"]
+badge: "Teamwork"
+tags: ["2.0","finals","presentation"]
 ---
 
 Whether you're a returning participant or someone looking to jump in for the first time, here’s a glimpse of what you can expect.
