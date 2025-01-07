@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Achievers" sideBarActiveItemID="cfp">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Top Achievers</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+ <div class="overflow-x-auto">
+      <table class="table-auto w-full border-collapse border border-gray-300 rounded-lg">
+        <thead>
+          <tr class="bg-yellow-500 text-white">
+            <th class="px-4 py-2 border border-gray-300 rounded-tl-lg">Name</th>
+            <th class="px-4 py-2 border border-gray-300">Achievement</th>
+            <th class="px-4 py-2 border border-gray-300 rounded-tr-lg">Year</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white text-gray-700">
+          <tr class="hover:bg-gray-100">
+            <td class="px-4 py-2 border border-gray-300 text-center">John Doe</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">Top Scorer</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">2023</td>
+          </tr>
+          <tr class="hover:bg-gray-100">
+            <td class="px-4 py-2 border border-gray-300 text-center">Jane Smith</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">Best Innovator</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">2024</td>
+          </tr>
+          <tr class="hover:bg-gray-100">
+            <td class="px-4 py-2 border border-gray-300 text-center">Alice Johnson</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">Community Leader</td>
+            <td class="px-4 py-2 border border-gray-300 text-center">2025</td>
+          </tr>
+        </tbody>
+      </table>  
+
+    </div>
+  </div>
+
+
+  
+
+</BaseLayout>
