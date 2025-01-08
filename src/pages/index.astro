@@ -11,10 +11,27 @@ const posts = (await getCollection("blog")).sort(
 );
 
 const last_posts = posts.slice(0, 3);
+let showAlert = true;
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
+
+{showAlert ? (
+  <div class="fixed top-4 right-4 z-50 bg-blue-500 text-white rounded-lg shadow-lg p-4 flex items-center space-x-4 transition-transform transform">
+    <span class="text-lg font-semibold">Results have been released!</span>
+    <button 
+      onClick={() => { showAlert = false; }} 
+      class="ml-4 p-2 bg-transparent border-0 text-white hover:text-gray-200 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+) : null}
+
+
+
     <div class="text-5xl font-bold">Are You Ready? 🔥</div>
     <div class="text-3xl py-3 font-bold">
       The Algo-rhythmic Chase Begins!
@@ -67,13 +84,6 @@ The beauty of LogicLoom lies in its accessibility. Mentoring sessions are provid
       url="/rules"
       badge="Ends on 5th Jan 10.00 IST"
       target="_self"
-    />
-<InfoCard
-      title="❆ Results: Lists of Finalists Announced"
-      sub="Posted on 05 Jan 2025"
-      desc="Click Here"
-      url="/finalists.pdf"
-      target="_blank"
     />
     <div class="divider my-0"></div>
   </div>
