@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-cream p-10 relative">
+    <div id="menu" class="fixed inset-0 bg-black bg-opacity-90 text-white flex flex-col items-center justify-center hidden z-50 w-full h-full">
+        <button onclick="toggleMenu()" class="absolute top-5 right-5 text-4xl">&times;</button>
+        <nav class="text-2xl space-y-4">
+            <a href="#" class="block hover:underline">Home</a>
+            <a href="#" class="block hover:underline">Schedule</a>
+            <a href="#" class="block hover:underline">Speakers</a>
+            <a href="#" class="block hover:underline">Contact</a>
+        </nav>
+    </div>
+    
+    <button onclick="toggleMenu()" class="absolute top-10 left-4 bg-black text-white p-3 text-lg font-bold rounded-full md:p-4 md:text-xl">☰</button>
+    <div class="max-w-4xl mx-auto text-center relative">
+        <!-- Hero Section with Cut Corner -->
+        <div class="relative bg-orange-100 p-10 rounded-xl shadow-lg clip-path-custom">
+            <h1 class="text-6xl font-extrabold text-black drop-shadow-md">LOGIC LOOM</h1>
+            <p class="text-xl font-semibold mt-4">When: May - June 2025</p>
+            <p class="text-xl font-semibold">Paradox, IIT Madras</p>
+            <button class="mt-4 bg-red-500 text-white px-6 py-2 rounded-full font-bold shadow-md">Reserve ✱ your wristband</button>
+        </div>
+        
+        <h1 class="text-3xl font-bold mt-10 mb-6">Schedule</h1>
+        
+        <div class="space-y-4">
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-300">
+                <span class="text-lg font-bold">10:00</span>
+                <span class="text-lg font-semibold">Registration & Networking</span>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-300">
+                <span class="text-lg font-bold">10:45</span>
+                <span class="text-lg font-semibold">Opening Remarks</span>
+            </div>
+            <div class="bg-orange-500 text-white rounded-lg shadow-md p-4 flex items-center justify-between border border-gray-300">
+                <span class="text-lg font-bold">11:00</span>
+                <span class="text-lg font-semibold">Keynote: Piyush Wairale</span>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-300">
+                <div class="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+                    <img src="https://wayanadiitm.github.io/ml/events/logicloom2/storage/piyushsir2.PNG" class="rounded-md w-20 md:w-auto" alt="Keynote Speaker">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-xl font-bold">Opening Keynote</h2>
+                        <p class="text-gray-700 text-sm mt-2">You know him as the CI, dbms iitm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .clip-path-custom {
+            clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</body>
+</html>
