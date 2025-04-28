@@ -30,8 +30,8 @@ export default function Home() {
   return (
     <div id="homepage">
       {/* hero section */}
-      <div id="hero" className="w-[100vw] h-[100vh] flex flex-row items-start justify-between">
-        <NavStrip></NavStrip>
+      <div id="hero" className="h-[100vh] flex flex-row items-start justify-between">
+        <NavStrip />
         <div className="w-full flex flex-row justify-evenly">
           <div className="w-full grid place-items-center">
             <img src={piratePng} alt="image of a pirate ship" className="pirate-ship w-[40vw] pr-6 saturate-[.8]" />
@@ -43,15 +43,11 @@ export default function Home() {
             <button id="register" className="golden-btn">register now</button>
           </div>
         </div>
-        <SocialStrip></SocialStrip>
+        <SocialStrip />
       </div>
 
       {/* faq section */}
-      <div className="w-full py-16 grid place-items-center">
-        <div className="w-3xl">
-          <FAQAccordion></FAQAccordion>
-        </div>
-      </div>
+      <FAQAccordion />
 
       {/* about section */}
       <About />

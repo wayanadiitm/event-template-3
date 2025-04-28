@@ -4,7 +4,7 @@ export default function NavStrip() {
       <span className="rotate-270 uppercase">logicloom</span>
       <span className="block h-20">{/*spacer*/}</span>
       <span className="rotate-270 flex flex-row gap-6 uppercase">
-        <a href="#home">home</a>
+        <a href="#hero">home</a>
         <a href="#about">about</a>
         <a href="#faq">faq</a>
       </span>

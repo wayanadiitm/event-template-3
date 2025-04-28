@@ -51,18 +51,20 @@ export default function FAQAccordion() {
   ];
 
   return (
-    <div id="faq" className="py-10">
-      <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions (FAQs)</h2>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>
-              <div className="whitespace-pre-line">{faq.answer}</div>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+    <div className="w-full py-16 grid place-items-center">
+      <div id="faq" className="w-3xl">
+        <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions (FAQs)</h2>
+        <Accordion type="single" collapsible>
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionContent>
+                <div className="whitespace-pre-line">{faq.answer}</div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
     </div>
   );
 }
