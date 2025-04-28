@@ -51,8 +51,8 @@ export default function FAQAccordion() {
   ];
 
   return (
-    <div className="w-full py-16 grid place-items-center">
-      <div id="faq" className="w-3xl">
+    <div className="w-full py-16 px-10 grid place-items-center">
+      <div id="faq" className="lg:w-3xl">
         <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions (FAQs)</h2>
         <Accordion type="single" collapsible>
           {faqs.map((faq, index) => (

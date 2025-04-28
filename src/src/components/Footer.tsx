@@ -45,10 +45,10 @@ export default function Footer() {
 
 
   return (
-    <footer className="bg-[#00011C] w-full h-52 grid place-items-center">
-      <div className="flex flex-row w-4xl justify-between">
+    <footer className="w-full lg:h-52 grid place-items-center">
+      <div className="flex flex-col py-6 lg:flex-row lg:w-4xl justify-between">
         {/* qr */}
-        <div>
+        <div className="mb-6 lg:mb-0">
           <a href="/" className="inline-block text-lg font-bold mb-2">
             Logic Loom 4.0
           </a>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* links */}
-        <nav className="flex flex-row gap-10">
+        <nav className="flex flex-col gap-6 lg:flex-row lg:gap-10">
           <div>
             <h3 className="text-lg font-bold">Useful Docs</h3>
             <hr className="border-none h-0.5 my-0.5 bg-[#3dbad2]" />
