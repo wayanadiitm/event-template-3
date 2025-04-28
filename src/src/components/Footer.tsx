@@ -1,5 +1,3 @@
-import qr from "../assets/qr.png";
-
 export default function Footer() {
   const usefulDocs = [
     {
@@ -52,7 +50,7 @@ export default function Footer() {
           <a href="/" className="inline-block text-lg font-bold mb-2">
             Logic Loom 4.0
           </a>
-          <img src={qr} alt="qr" className="w-30 rounded" />
+          <img src="qr.png" alt="qr" className="w-30 rounded" />
         </div>
 
         {/* links */}
