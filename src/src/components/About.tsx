@@ -1,8 +1,8 @@
 export default function About() {
   return (
-    <div id="about" className="w-full py-10 grid place-items-center mb-28">
+    <div id="about" className="w-full py-10 px-10 grid place-items-center mb-28">
       <h2 className="text-2xl font-bold text-center mb-12">Why LogicLoom 4.0?</h2>
-      <div className="w-3xl">
+      <div className="lg:w-3xl">
         <p>
           Get ready to put your problem-solving skills to the test because LogicLoom is back-bigger, better, and bolder than ever!
           <br />
