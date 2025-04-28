@@ -1,6 +1,5 @@
 import NavStrip from "../components/NavStrip";
 import SocialStrip from "../components/SocialStrip";
-import piratePng from "../assets/pirate.png"
 import { MapPin, MenuIcon } from "lucide-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -44,7 +43,7 @@ export default function Home() {
         <span className={showNav ? 'block' : 'hidden'}><NavStrip /></span>
         <div className="w-full flex flex-col md:flex-row justify-evenly">
           <div className="w-full grid place-items-center">
-            <img src={piratePng} alt="image of a pirate ship" className="pirate-ship w-[80vw] pt-14 md:pt-6 md:w-[40vw] pr-6 saturate-[.8]" />
+            <img src="pirate.png" alt="image of a pirate ship" className="pirate-ship w-[80vw] pt-14 md:pt-6 md:w-[40vw] pr-6 saturate-[.8]" />
           </div>
           <div className="w-full pt-20 lg:pt-64 pl-12">
             <h1 className="uppercase new-rocker-regular text-2xl md:text-5xl mb-4">logic loom 4.0</h1>

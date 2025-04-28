@@ -63,12 +63,12 @@
 
 #hero {
   color: #fef1a2;
-  background-image: url('/background-noise.jpg');
+  background-image: url('background-noise.jpg');
   background-size: cover;
 }
 
 footer {
-  background-image: url('/y-pattern.png');
+  background-image: url('y-pattern.png');
   color: #000317;
 }
 
